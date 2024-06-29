@@ -13,6 +13,7 @@ services:
       - ollama
     networks:
       - ollama-docker
+    container_name: app
 
   ollama:
     image: ollama/ollama:latest

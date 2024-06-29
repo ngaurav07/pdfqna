@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.11-slim as builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /app
-RUN pip3 install -r requirements.txt
+RUN pip3 install --upgrade pip && pip3 install -r requirements.txt
 
 ENV OLLAMA_HOST_URL ${OLLAMA_HOST_URL}
 

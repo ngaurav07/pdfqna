@@ -8,7 +8,8 @@ Docker based installation is simple. It contains Ollama(llama runner) with the s
 foo@bar:~$ docker compose build app
 foo@bar:~$ docker compose up
 ```
-> **_NOTE:_** Open https://localhost:8501 in the browser
+> **_NOTE:_** Open https://localhost:8501 in the browser. At first, It will take long time to download the models.
+
 
 ## Components
 The components used in this repository are: 
