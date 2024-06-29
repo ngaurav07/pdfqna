@@ -1,7 +1,7 @@
-langchain
-langchain_community
-pypdf
-typing
-langchain_chroma
-streamlit
-PyPDF2
+langchain==0.2.6
+langchain-chroma==0.1.2
+PyPDF2==3.0.1
+typing==3.7.4.3
+streamlit==1.36.0
+langchain-community==0.2.6
+pypdf==4.2.0

@@ -7,7 +7,7 @@ if 'response_helper_instance' not in st.session_state:
 
 if __name__ == "__main__":
       st.set_page_config(page_title="Upload PDF and ask question.")
-      st.header("Ask PDF 🔗")
+      st.header("Upload and ask your PDF 🔗")
       pdf = st.file_uploader("Upload PDF", type="pdf")
       if pdf is not None:
           st.session_state.response_helper_instance.load_pdf(pdf)

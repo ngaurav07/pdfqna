@@ -4,14 +4,19 @@ from langchain.chains.question_answering import load_qa_chain
 
 #Initialize the open source llama models
 def _initialize_model(model: str = 'llama3'):
-    model = ChatOllama(model=model)
-    return model
-
+    try:
+        model = ChatOllama(model=model)
+        return model
+    except:
+        raise Exception("Unable to initialize chat model")
 
 #initialize the embedding model to store in the vector database
 def initialize_embedding(model: str = 'mxbai-embed-large'):
-    embedding_model = OllamaEmbeddings(model=model)
-    return embedding_model
+    try:
+        embedding_model = OllamaEmbeddings(model=model)
+        return embedding_model
+    except:
+        raise Exception("Unable to initialize the embedding model")
 
 
 #question answer chain
