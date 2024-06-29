@@ -13,6 +13,8 @@ def initialize_embedding(model: str = 'mxbai-embed-large'):
     embedding_model = OllamaEmbeddings(model=model)
     return embedding_model
 
+
+#question answer chain
 def create_chain():
     llm = _initialize_model()
     chain = load_qa_chain(llm, chain_type="stuff")

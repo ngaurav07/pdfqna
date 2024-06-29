@@ -3,3 +3,5 @@ langchain_community
 pypdf
 typing
 langchain_chroma
+streamlit
+PyPDF2
