@@ -6,8 +6,8 @@ import os
 #Initialize the open source llama models
 def _initialize_model(model: str = 'llama3'):
     try:
-        # base_url = os.environ['OLLAMA_HOST_URL']
-        base_url = "http://ollama:11434"
+        base_url = os.environ['OLLAMA_HOST_URL']
+        # base_url = "http://ollama:11434"
         print("base url is", base_url)
         model = ChatOllama(
             base_url=base_url,
@@ -20,8 +20,8 @@ def _initialize_model(model: str = 'llama3'):
 #initialize the embedding model to store in the vector database
 def initialize_embedding(model: str = 'mxbai-embed-large'):
     try:
-        # base_url = os.environ['OLLAMA_HOST_URL']
-        base_url = "http://ollama:11434"
+        base_url = os.environ['OLLAMA_HOST_URL']
+        # base_url = "http://ollama:11434"
         print("embedding", base_url)
         embedding_model = OllamaEmbeddings(
             base_url=base_url,
