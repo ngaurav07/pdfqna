@@ -7,7 +7,6 @@ pdf_location = "files"
 def save_pdf(pdf_contents) -> str:
     if not os.path.exists(pdf_location):
         os.makedirs(pdf_location)
-    print("the data is being extracted again")
     pdf_save_path = os.path.join(pdf_location,pdf_contents.name)
     with open(pdf_save_path, mode='wb') as w:
         w.write(pdf_contents.getvalue())

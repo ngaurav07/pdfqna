@@ -10,6 +10,10 @@ class ResponseHelper:
         self.chain = model_loader.create_chain()
 
     def load_pdf(self, pdf):
+        '''
+            Load the pdf if it is updated.
+            Creates the documents and store the embeddings in the vector store.
+        '''
         #only load the documents and vector data if the pdf is updated
         if not self.pdf_save_path.endswith(pdf.name):
             #delete the previous information(documents and embeddings) after pdf is updated
