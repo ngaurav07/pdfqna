@@ -14,7 +14,7 @@ if 'my_instance' not in st.session_state:
 
 if __name__ == "__main__":
       st.set_page_config(page_title="Upload PDF and ask question.")
-      st.header("Ask PDF")
+      st.header("Ask PDF 🔗")
       pdf = st.file_uploader("Upload PDF", type="pdf")
       if pdf is not None:
           st.session_state.my_instance.load_pdf(pdf)
